@@ -1,52 +1,79 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState('technical')
+  const [activeTab, setActiveTab] = useState('design')
 
-  const technicalSkills = [
-    { name: "Adobe Photoshop", level: 95, icon: "🎨", color: "from-blue-500 to-blue-600" },
-    { name: "Adobe Illustrator", level: 92, icon: "🖌️", color: "from-orange-500 to-orange-600" },
-    { name: "Adobe InDesign", level: 88, icon: "📄", color: "from-pink-500 to-pink-600" },
-    { name: "Figma", level: 85, icon: "🎯", color: "from-purple-500 to-purple-600" },
-    { name: "Adobe After Effects", level: 78, icon: "🎬", color: "from-red-500 to-red-600" },
-    { name: "Sketch", level: 82, icon: "💎", color: "from-yellow-500 to-yellow-600" },
-    { name: "Canva", level: 90, icon: "✨", color: "from-green-500 to-green-600" },
-    { name: "Blender", level: 70, icon: "🔮", color: "from-indigo-500 to-indigo-600" }
-  ]
-
-  const softSkills = [
-    { name: "Creative Thinking", level: 95, icon: "💡", color: "from-purple-500 to-pink-500" },
-    { name: "Communication", level: 90, icon: "💬", color: "from-blue-500 to-cyan-500" },
-    { name: "Problem Solving", level: 88, icon: "🧩", color: "from-green-500 to-teal-500" },
-    { name: "Time Management", level: 85, icon: "⏰", color: "from-orange-500 to-red-500" },
-    { name: "Team Collaboration", level: 92, icon: "🤝", color: "from-indigo-500 to-purple-500" },
-    { name: "Client Relations", level: 87, icon: "🎭", color: "from-pink-500 to-rose-500" },
-    { name: "Adaptability", level: 89, icon: "🔄", color: "from-cyan-500 to-blue-500" },
-    { name: "Attention to Detail", level: 93, icon: "🔍", color: "from-emerald-500 to-green-500" }
-  ]
+  const skillCategories = {
+    design: {
+      title: 'Design Tools',
+      skills: [
+        { name: 'Adobe Photoshop', level: 95, color: 'from-blue-500 to-blue-600' },
+        { name: 'Adobe Illustrator', level: 90, color: 'from-orange-500 to-orange-600' },
+        { name: 'Adobe InDesign', level: 85, color: 'from-pink-500 to-pink-600' },
+        { name: 'Figma', level: 88, color: 'from-purple-500 to-purple-600' },
+        { name: 'Sketch', level: 80, color: 'from-yellow-500 to-yellow-600' },
+        { name: 'Adobe XD', level: 82, color: 'from-indigo-500 to-indigo-600' }
+      ]
+    },
+    technical: {
+      title: 'Technical Skills',
+      skills: [
+        { name: 'UI/UX Design', level: 92, color: 'from-green-500 to-green-600' },
+        { name: 'Web Design', level: 88, color: 'from-teal-500 to-teal-600' },
+        { name: 'Print Design', level: 90, color: 'from-red-500 to-red-600' },
+        { name: 'Brand Identity', level: 94, color: 'from-cyan-500 to-cyan-600' },
+        { name: 'Typography', level: 87, color: 'from-violet-500 to-violet-600' },
+        { name: 'Color Theory', level: 93, color: 'from-rose-500 to-rose-600' }
+      ]
+    },
+    creative: {
+      title: 'Creative Skills',
+      skills: [
+        { name: 'Creative Thinking', level: 96, color: 'from-emerald-500 to-emerald-600' },
+        { name: 'Problem Solving', level: 91, color: 'from-amber-500 to-amber-600' },
+        { name: 'Visual Communication', level: 89, color: 'from-lime-500 to-lime-600' },
+        { name: 'Concept Development', level: 88, color: 'from-sky-500 to-sky-600' },
+        { name: 'Art Direction', level: 85, color: 'from-fuchsia-500 to-fuchsia-600' },
+        { name: 'Trend Analysis', level: 83, color: 'from-slate-500 to-slate-600' }
+      ]
+    }
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+        staggerChildren: 0.2,
+        delayChildren: 0.1
       }
     }
   }
 
-  const skillVariants = {
-    hidden: { x: -50, opacity: 0 },
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 0.6,
         ease: "easeOut"
       }
     }
+  }
+
+  const skillVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: (index) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: "easeOut"
+      }
+    })
   }
 
   const progressVariants = {
@@ -61,221 +88,197 @@ const Skills = () => {
     })
   }
 
-  const SkillBar = ({ skill, index }) => (
-    <motion.div
-      variants={skillVariants}
-      custom={skill.level}
-      className="skill-item mb-6"
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.2 }}
-    >
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-3">
-          <motion.span 
-            className="text-2xl"
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
-          >
-            {skill.icon}
-          </motion.span>
-          <span className="font-semibold text-gray-800">{skill.name}</span>
-        </div>
-        <motion.span 
-          className="text-sm font-bold text-gray-600"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-        >
-          {skill.level}%
-        </motion.span>
-      </div>
-      
-      <div className="relative h-3 bg-gray-200 rounded-full overflow-hidden">
-        <motion.div
-          variants={progressVariants}
-          custom={skill.level}
-          className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full`}
-          style={{ boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}
-        />
-        <motion.div
-          animate={{ x: ['-100%', '100%'] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "linear",
-            delay: 2
-          }}
-          className="absolute top-0 left-0 h-full w-8 bg-white opacity-30 rounded-full"
-          style={{ filter: 'blur(1px)' }}
-        />
-      </div>
-    </motion.div>
-  )
-
   return (
-    <section className="skills-section py-20 px-6 bg-white relative overflow-hidden">
+    <section className="skills-section py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             y: [0, -20, 0],
-            x: [0, 10, 0],
-            rotate: [0, 5, 0]
+            scale: [1, 1.1, 1]
           }}
           transition={{
-            duration: 8,
+            duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-20 right-20 w-6 h-6 bg-purple-300 rounded-full opacity-20"
+          className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-200 to-pink-200 rounded-full opacity-20"
         />
         <motion.div
           animate={{
-            y: [0, 15, 0],
-            x: [0, -10, 0],
-            rotate: [0, -3, 0]
+            scale: [1, 1.2, 1],
+            opacity: [0.15, 0.3, 0.15]
           }}
           transition={{
-            duration: 10,
+            duration: 4,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
+            ease: "easeInOut"
           }}
-          className="absolute bottom-32 left-16 w-4 h-4 bg-pink-300 rounded-full opacity-20"
+          className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full"
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={containerVariants}
-          className="text-center mb-16"
-        >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+        className="container mx-auto max-w-6xl relative z-10"
+      >
+        {/* Section Header */}
+        <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
           <motion.h2 
-            variants={skillVariants}
-            className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
           >
-            My Skills
+            Skills & Expertise
           </motion.h2>
           <motion.div
-            variants={skillVariants}
-            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"
+            variants={itemVariants}
+            className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"
           />
           <motion.p 
-            variants={skillVariants}
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            variants={itemVariants}
+            className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
           >
-            A comprehensive blend of technical expertise and soft skills that enable me to deliver exceptional design solutions and collaborate effectively with clients and teams.
+            A comprehensive overview of my design capabilities and technical expertise developed over years of creative work.
           </motion.p>
         </motion.div>
 
         {/* Tab Navigation */}
         <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-          className="flex justify-center mb-12"
+          variants={itemVariants}
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
         >
-          <div className="bg-gray-100 p-2 rounded-full shadow-inner">
+          {Object.entries(skillCategories).map(([key, category]) => (
             <motion.button
-              onClick={() => setActiveTab('technical')}
-              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === 'technical'
+              key={key}
+              onClick={() => setActiveTab(key)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 ${
+                activeTab === key
                   ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-gray-800'
+                  : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              Technical Skills
+              {category.title}
             </motion.button>
-            <motion.button
-              onClick={() => setActiveTab('soft')}
-              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ml-2 ${
-                activeTab === 'soft'
-                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-gray-800'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Soft Skills
-            </motion.button>
-          </div>
+          ))}
         </motion.div>
 
         {/* Skills Content */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="grid lg:grid-cols-2 gap-8"
-        >
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={containerVariants}
-            className="space-y-6"
-          >
-            {(activeTab === 'technical' ? technicalSkills : softSkills)
-              .slice(0, Math.ceil((activeTab === 'technical' ? technicalSkills : softSkills).length / 2))
-              .map((skill, index) => (
-                <SkillBar key={skill.name} skill={skill} index={index} />
-              ))}
-          </motion.div>
-          
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={containerVariants}
-            className="space-y-6"
-          >
-            {(activeTab === 'technical' ? technicalSkills : softSkills)
-              .slice(Math.ceil((activeTab === 'technical' ? technicalSkills : softSkills).length / 2))
-              .map((skill, index) => (
-                <SkillBar 
-                  key={skill.name} 
-                  skill={skill} 
-                  index={index + Math.ceil((activeTab === 'technical' ? technicalSkills : softSkills).length / 2)} 
-                />
-              ))}
-          </motion.div>
+        <motion.div variants={itemVariants}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100"
+            >
+              <motion.h3 
+                className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                {skillCategories[activeTab].title}
+              </motion.h3>
+              
+              <div className="grid gap-6 sm:gap-8">
+                {skillCategories[activeTab].skills.map((skill, index) => (
+                  <motion.div 
+                    key={skill.name}
+                    custom={index}
+                    variants={skillVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="skill-item"
+                  >
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="font-medium text-gray-800 text-sm sm:text-base">
+                        {skill.name}
+                      </span>
+                      <motion.span 
+                        className="text-gray-600 font-bold text-sm sm:text-base"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1 + 0.5 }}
+                      >
+                        {skill.level}%
+                      </motion.span>
+                    </div>
+                    
+                    <div className="relative">
+                      <div className="w-full bg-gray-200 rounded-full h-2 sm:h-3 overflow-hidden">
+                        <motion.div 
+                          custom={skill.level}
+                          variants={progressVariants}
+                          initial="hidden"
+                          animate="visible"
+                          className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
+                        />
+                      </div>
+                      
+                      {/* Skill level indicator */}
+                      <motion.div 
+                        className="absolute top-0 h-2 sm:h-3 w-1 bg-white rounded-full shadow-md"
+                        initial={{ left: '0%' }}
+                        animate={{ left: `${skill.level}%` }}
+                        transition={{ 
+                          duration: 1.5, 
+                          delay: index * 0.1 + 0.5,
+                          ease: "easeOut"
+                        }}
+                        style={{ transform: 'translateX(-50%)' }}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </motion.div>
 
-        {/* Skills Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 text-center"
+        {/* Additional Skills Summary */}
+        <motion.div 
+          variants={itemVariants}
+          className="mt-12 sm:mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg">
-            <motion.h3 
-              className="text-2xl font-bold text-gray-800 mb-4"
-              whileHover={{ scale: 1.02 }}
-            >
-              {activeTab === 'technical' ? 'Technical Expertise' : 'Professional Qualities'}
-            </motion.h3>
-            <motion.p 
-              className="text-gray-600 leading-relaxed max-w-2xl mx-auto"
-              whileHover={{ x: 2 }}
-              transition={{ duration: 0.2 }}
-            >
-              {activeTab === 'technical' 
-                ? "Proficient in industry-standard design tools and software, with continuous learning to stay updated with the latest design trends and technologies."
-                : "Strong interpersonal and professional skills that enable effective collaboration, clear communication, and successful project delivery in diverse team environments."
-              }
-            </motion.p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+            {[
+              { value: '5+', label: 'Years Experience', gradient: 'from-purple-600 to-pink-600', delay: 0 },
+              { value: '15+', label: 'Design Tools', gradient: 'from-blue-600 to-cyan-600', delay: 0.2 },
+              { value: '200+', label: 'Projects Done', gradient: 'from-green-600 to-teal-600', delay: 0.4 },
+              { value: '50+', label: 'Happy Clients', gradient: 'from-orange-600 to-red-600', delay: 0.6 }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg"
+              >
+                <motion.div 
+                  className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-2`}
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    opacity: [0.7, 1, 0.7]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: stat.delay
+                  }}
+                >
+                  {stat.value}
+                </motion.div>
+                <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   )
 }

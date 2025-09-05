@@ -38,7 +38,7 @@ const AboutMe = () => {
   }
 
   return (
-    <section className="about-me-section py-20 px-6 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="about-me-section py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -73,15 +73,15 @@ const AboutMe = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center"
         >
           {/* Left side - Image and decorative elements */}
-          <motion.div variants={itemVariants} className="relative">
+          <motion.div variants={itemVariants} className="relative order-2 lg:order-1">
             <motion.div
               variants={imageVariants}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="relative mx-auto lg:mx-0 w-80 h-80 rounded-full overflow-hidden shadow-2xl"
+              className="relative mx-auto lg:mx-0 w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 opacity-20" />
               <img 
@@ -126,10 +126,10 @@ const AboutMe = () => {
           </motion.div>
 
           {/* Right side - About content */}
-          <motion.div variants={itemVariants} className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6 order-1 lg:order-2">
             <motion.div variants={itemVariants}>
               <motion.h2 
-                className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4"
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-3 sm:mb-4 text-center lg:text-left"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
@@ -137,13 +137,13 @@ const AboutMe = () => {
               </motion.h2>
               <motion.div
                 variants={itemVariants}
-                className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mb-8"
+                className="w-16 sm:w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mb-6 sm:mb-8 mx-auto lg:mx-0"
               />
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
+            <motion.div variants={itemVariants} className="space-y-4 text-center lg:text-left">
               <motion.p 
-                className="text-lg text-gray-700 leading-relaxed"
+                className="text-base sm:text-lg text-gray-700 leading-relaxed px-4 lg:px-0"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
@@ -151,7 +151,7 @@ const AboutMe = () => {
               </motion.p>
               
               <motion.p 
-                className="text-lg text-gray-700 leading-relaxed"
+                className="text-base sm:text-lg text-gray-700 leading-relaxed px-4 lg:px-0"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
@@ -159,7 +159,7 @@ const AboutMe = () => {
               </motion.p>
               
               <motion.p 
-                className="text-lg text-gray-700 leading-relaxed"
+                className="text-base sm:text-lg text-gray-700 leading-relaxed px-4 lg:px-0"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
@@ -170,7 +170,7 @@ const AboutMe = () => {
             {/* Stats */}
             <motion.div 
               variants={itemVariants}
-              className="grid grid-cols-3 gap-6 pt-8"
+              className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8"
             >
               <motion.div 
                 className="text-center"
@@ -178,13 +178,13 @@ const AboutMe = () => {
                 transition={{ duration: 0.2 }}
               >
                 <motion.div 
-                  className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                  className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
                   5+
                 </motion.div>
-                <div className="text-gray-600 text-sm">Years Experience</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Years Experience</div>
               </motion.div>
               
               <motion.div 
@@ -193,13 +193,13 @@ const AboutMe = () => {
                 transition={{ duration: 0.2 }}
               >
                 <motion.div 
-                  className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+                  className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                 >
                   200+
                 </motion.div>
-                <div className="text-gray-600 text-sm">Projects Completed</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Projects Completed</div>
               </motion.div>
               
               <motion.div 
@@ -208,13 +208,13 @@ const AboutMe = () => {
                 transition={{ duration: 0.2 }}
               >
                 <motion.div 
-                  className="text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
+                  className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 >
                   50+
                 </motion.div>
-                <div className="text-gray-600 text-sm">Happy Clients</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Happy Clients</div>
               </motion.div>
             </motion.div>
           </motion.div>

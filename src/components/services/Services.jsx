@@ -7,43 +7,43 @@ const Services = () => {
     {
       id: 1,
       title: "Brand Identity Design",
-      description: "Crafting unique logos and visual identities that communicate your brand's story effectively and memorably.",
+      description: "Create compelling brand identities that resonate with your target audience and stand out in the market.",
       image: "/assets/brand-identity.png",
       color: "from-purple-500 to-pink-500"
     },
     {
       id: 2,
-      title: "Print Design",
-      description: "Creating stunning brochures, flyers, business cards, and marketing materials that make lasting impressions.",
-      image: "/assets/print-design.png",
+      title: "Logo Design & Branding",
+      description: "Craft memorable logos and comprehensive branding solutions that tell your unique story.",
+      image: "/assets/logo-design.png", 
       color: "from-blue-500 to-cyan-500"
     },
     {
       id: 3,
-      title: "Digital Illustrations",
-      description: "Custom digital artwork and illustrations that bring your concepts to life with artistic flair.",
-      image: "/assets/digital-illustration.png",
+      title: "Print Design",
+      description: "Design stunning print materials including brochures, flyers, business cards, and marketing collateral.",
+      image: "/assets/print-design.png",
       color: "from-green-500 to-teal-500"
     },
     {
       id: 4,
-      title: "Poster Design",
-      description: "Eye-catching posters for events, promotions, and campaigns that demand attention and drive engagement.",
-      image: "/assets/poster-design.png",
+      title: "Digital Design",
+      description: "Create engaging digital designs for web, social media, and online marketing campaigns.",
+      image: "/assets/digital-design.png",
       color: "from-orange-500 to-red-500"
     },
     {
       id: 5,
-      title: "Social Media Graphics",
-      description: "Engaging visual content for social platforms that boosts your online presence and brand recognition.",
-      image: "/assets/social-media.png",
+      title: "Packaging Design",
+      description: "Design innovative packaging solutions that protect your product and attract customers.",
+      image: "/assets/packaging-design.png",
       color: "from-indigo-500 to-purple-500"
     },
     {
       id: 6,
-      title: "Package Design",
-      description: "Innovative packaging solutions that protect your product while creating an unforgettable unboxing experience.",
-      image: "/assets/package-design.png",
+      title: "Illustration & Graphics",
+      description: "Custom illustrations and graphic elements to enhance your brand's visual communication.",
+      image: "/assets/illustration.png",
       color: "from-pink-500 to-rose-500"
     }
   ]
@@ -59,8 +59,8 @@ const Services = () => {
     }
   }
 
-  const titleVariants = {
-    hidden: { y: -50, opacity: 0 },
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -72,89 +72,71 @@ const Services = () => {
   }
 
   return (
-    <div className='services_section container mx-auto px-6 py-20'>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={containerVariants}
-        className="text-center mb-16"
-      >
-        <motion.h1 
-          variants={titleVariants}
-          className='text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6'
-        > 
-          Creative Services 
-        </motion.h1>
-        <motion.div
-          variants={titleVariants}
-          className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"
-        />
-        <motion.p 
-          variants={titleVariants}
-          className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-        > 
-          Transforming ideas into visual masterpieces. I offer comprehensive design solutions that elevate your brand and captivate your audience through innovative creativity and strategic thinking.
-        </motion.p>
-      </motion.div>
-
-      <motion.div 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={containerVariants}
-        className='grid gap-8 md:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-      >
-        {services.map((service, index) => (
-          <Card 
-            key={service.id}
-            service={service}
-            index={index}
-          />
-        ))}
-      </motion.div>
-
-      {/* Creative floating elements */}
+    <div className='services_section container mx-auto px-4 sm:px-6 py-16 sm:py-20 relative'>
+      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-r from-purple-200 to-pink-200 rounded-full opacity-20"
+        />
+        <motion.div
+          animate={{
             y: [0, -20, 0],
-            rotate: [0, 5, 0]
+            scale: [1, 1.1, 1]
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-20 left-10 w-4 h-4 bg-purple-400 rounded-full opacity-20"
-        />
-        <motion.div
-          animate={{
-            y: [0, 20, 0],
-            rotate: [0, -5, 0]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-          className="absolute top-40 right-20 w-6 h-6 bg-pink-400 rounded-full opacity-20"
-        />
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 10, 0]
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4
-          }}
-          className="absolute bottom-40 left-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-20"
+          className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full opacity-15"
         />
       </div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+        className="text-center mb-12 sm:mb-16"
+      >
+        <motion.h1 
+          variants={itemVariants}
+          className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4 sm:mb-6'
+        >
+          Creative Services
+        </motion.h1>
+        <motion.div
+          variants={itemVariants}
+          className="w-16 sm:w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6 sm:mb-8"
+        />
+        <motion.p 
+          variants={itemVariants}
+          className='text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4'
+        >
+          Transform your vision into stunning visual experiences with our comprehensive design services
+        </motion.p>
+      </motion.div>
+      
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerVariants}
+        className='grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+      >
+        {services.map((service, index) => (
+          <Card key={service.id} service={service} index={index} />
+        ))}
+      </motion.div>
     </div>
   )
 }

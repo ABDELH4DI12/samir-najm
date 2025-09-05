@@ -61,13 +61,13 @@ const Card = ({ service, index }) => {
       />
       
       {/* Card content */}
-      <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-8 h-full shadow-lg group-hover:shadow-2xl transition-all duration-300">
+      <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-4 sm:p-6 lg:p-8 h-full shadow-lg group-hover:shadow-2xl transition-all duration-300">
         {/* Image */}
         <motion.div
           variants={iconVariants}
-          className="mb-6 flex justify-center"
+          className="mb-4 sm:mb-6 flex justify-center"
         >
-          <div className="w-20 h-20 rounded-xl overflow-hidden shadow-lg">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shadow-lg">
             <img 
               src={service.image} 
               alt={service.title}
@@ -79,7 +79,7 @@ const Card = ({ service, index }) => {
               }}
             />
             <div 
-              className={`w-full h-full bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center text-white font-bold text-lg hidden`}
+              className={`w-full h-full bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-lg hidden`}
             >
               {service.title.split(' ').map(word => word[0]).join('')}
             </div>
@@ -88,7 +88,7 @@ const Card = ({ service, index }) => {
 
         {/* Title */}
         <motion.h3 
-          className={`text-2xl font-bold mb-4 text-center bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}
+          className={`text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-center bg-gradient-to-r ${service.color} bg-clip-text text-transparent px-2`}
           animate={{
             scale: isHovered ? 1.05 : 1
           }}
@@ -99,7 +99,7 @@ const Card = ({ service, index }) => {
 
         {/* Description */}
         <motion.p 
-          className="text-gray-600 text-center leading-relaxed"
+          className="text-gray-600 text-center leading-relaxed text-sm sm:text-base px-2"
           animate={{
             y: isHovered ? -2 : 0
           }}
