@@ -68,7 +68,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between p-4 max-w-7xl">
-        {/* Logo */}
+        {/* Samir */}
         <motion.a 
           href="#"
           onClick={(e) => {
@@ -79,7 +79,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <img src="/assets/Logo.jpeg" className="h-10 w-10 rounded-full object-cover" alt="Logo" />
+          <img src="/assets/Samir.jpg" className="h-10 w-10 rounded-full object-cover" alt="Samir" />
           <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             Samir
           </span>

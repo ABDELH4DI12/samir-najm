@@ -76,18 +76,18 @@ const AboutMe = () => {
           className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center"
         >
           {/* Left side - Image and decorative elements */}
-          <motion.div variants={itemVariants} className="relative order-2 lg:order-1">
+          <motion.div variants={itemVariants} className="relative order-1 lg:order-1">
             <motion.div
               variants={imageVariants}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="relative mx-auto lg:mx-0 w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl"
+              className="relative mx-auto lg:mx-0 w-72 h-72 sm:w-96 sm:h-96 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 opacity-20" />
               <img 
-                src="/assets/Logo.jpeg" 
+                src="/assets/Samir.jpg" 
                 alt="Samir - Graphic Designer" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
               <div className="absolute inset-0 ring-4 ring-white ring-opacity-50 rounded-full" />
             </motion.div>
@@ -126,7 +126,7 @@ const AboutMe = () => {
           </motion.div>
 
           {/* Right side - About content */}
-          <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+          <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6 order-2 lg:order-2">
             <motion.div variants={itemVariants}>
               <motion.h2 
                 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-3 sm:mb-4 text-center lg:text-left"
@@ -147,7 +147,7 @@ const AboutMe = () => {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                Hello! I'm <span className="font-bold text-purple-600">Samir</span>, a passionate graphic designer with over 5 years of experience in creating visual stories that captivate and inspire. My journey began with a simple love for colors and shapes, which has evolved into a professional career dedicated to bringing brands to life.
+                Creative and rigorous graphic designer, graduated from <span className="font-bold text-purple-600">ISAG (Institut Supérieur des Arts Graphiques)</span>, a recognized professional training center. With expert mastery of the Adobe suite (Photoshop, Illustrator, InDesign), I am immediately operational to translate your needs into impactful visual concepts.
               </motion.p>
               
               <motion.p 
@@ -155,7 +155,7 @@ const AboutMe = () => {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                I believe that great design is not just about making things look beautiful—it's about creating meaningful connections between brands and their audiences. Every project I undertake is an opportunity to solve problems creatively and deliver results that exceed expectations.
+                My analytical skills, responsiveness, and solution-oriented approach allow me to quickly integrate into any project requiring consistency, creativity, and efficiency. I am determined to bring concrete added value to your team.
               </motion.p>
               
               <motion.p 
@@ -182,9 +182,9 @@ const AboutMe = () => {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  5+
+                  6
                 </motion.div>
-                <div className="text-gray-600 text-xs sm:text-sm">Years Experience</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Months Experience</div>
               </motion.div>
               
               <motion.div 
@@ -197,7 +197,7 @@ const AboutMe = () => {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                 >
-                  200+
+                  35+
                 </motion.div>
                 <div className="text-gray-600 text-xs sm:text-sm">Projects Completed</div>
               </motion.div>
@@ -212,11 +212,33 @@ const AboutMe = () => {
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 >
-                  50+
+                  15+
                 </motion.div>
                 <div className="text-gray-600 text-xs sm:text-sm">Happy Clients</div>
               </motion.div>
             </motion.div>
+
+            {/* Download CV Button */}
+            <div className="pt-6 sm:pt-8 text-center lg:text-left">
+              <motion.a
+                href="/assets/CV.pdf"
+                download="Samir_CV.pdf"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.6 }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download CV
+              </motion.a>
+            </div>
           </motion.div>
         </motion.div>
       </div>

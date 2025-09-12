@@ -12,7 +12,7 @@ const About = () => {
                     <img src="/assets/Logo.jpeg" alt="" className='rounded-full w-7'/>
                     <img src="/assets/Logo.jpeg" alt="" className='rounded-full w-7'/> */}
                 </div>
-                <p className='text-lg text-gray-600'>Design is not what it looks like — it’s how it speaks</p>
+                <p className='text-lg text-gray-600'>Creativity is nothing but a mind set free</p>
             </div>
 
             <h1 className='text-center my-6 text-7xl font-bold'> Samir Portfolio </h1>

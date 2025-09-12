@@ -8,36 +8,24 @@ const Skills = () => {
     design: {
       title: 'Design Tools',
       skills: [
-        { name: 'Adobe Photoshop', level: 95, color: 'from-blue-500 to-blue-600' },
-        { name: 'Adobe Illustrator', level: 90, color: 'from-orange-500 to-orange-600' },
-        { name: 'Adobe InDesign', level: 85, color: 'from-pink-500 to-pink-600' },
-        { name: 'Figma', level: 88, color: 'from-purple-500 to-purple-600' },
-        { name: 'Sketch', level: 80, color: 'from-yellow-500 to-yellow-600' },
-        { name: 'Adobe XD', level: 82, color: 'from-indigo-500 to-indigo-600' }
+        { name: 'Photoshop', level: 75, color: 'from-blue-500 to-blue-600' },
+        { name: 'Illustrator', level: 97, color: 'from-orange-500 to-orange-600' },
+        { name: 'InDesign', level: 70, color: 'from-pink-500 to-pink-600' },
+        { name: 'Alight motion', level: 50, color: 'from-purple-500 to-purple-600' },
+        { name: 'Blender', level: 40, color: 'from-yellow-500 to-yellow-600' },
+        { name: 'META', level: 90, color: 'from-indigo-500 to-indigo-600' }
+      ] 
+    },
+    soft: {
+      title: 'Soft Skills',
+      skills: [
+        { name: 'Communication efficace', level: 90, color: 'from-blue-500 to-blue-600' },
+        { name: 'Leadership', level: 85, color: 'from-purple-500 to-purple-600' },
+        { name: 'Résolution de problème', level: 88, color: 'from-green-500 to-green-600' },
+        { name: 'Organisation et rigueur', level: 92, color: 'from-orange-500 to-orange-600' },
+        { name: 'Gestion du stress', level: 87, color: 'from-pink-500 to-pink-600' }
       ]
     },
-    technical: {
-      title: 'Technical Skills',
-      skills: [
-        { name: 'UI/UX Design', level: 92, color: 'from-green-500 to-green-600' },
-        { name: 'Web Design', level: 88, color: 'from-teal-500 to-teal-600' },
-        { name: 'Print Design', level: 90, color: 'from-red-500 to-red-600' },
-        { name: 'Brand Identity', level: 94, color: 'from-cyan-500 to-cyan-600' },
-        { name: 'Typography', level: 87, color: 'from-violet-500 to-violet-600' },
-        { name: 'Color Theory', level: 93, color: 'from-rose-500 to-rose-600' }
-      ]
-    },
-    creative: {
-      title: 'Creative Skills',
-      skills: [
-        { name: 'Creative Thinking', level: 96, color: 'from-emerald-500 to-emerald-600' },
-        { name: 'Problem Solving', level: 91, color: 'from-amber-500 to-amber-600' },
-        { name: 'Visual Communication', level: 89, color: 'from-lime-500 to-lime-600' },
-        { name: 'Concept Development', level: 88, color: 'from-sky-500 to-sky-600' },
-        { name: 'Art Direction', level: 85, color: 'from-fuchsia-500 to-fuchsia-600' },
-        { name: 'Trend Analysis', level: 83, color: 'from-slate-500 to-slate-600' }
-      ]
-    }
   }
 
   const containerVariants = {
