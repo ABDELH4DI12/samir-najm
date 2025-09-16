@@ -128,9 +128,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
                 {/* Current Content */}
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-4 text-center">
-                    {project.content[currentContentIndex]?.name}
-                  </h3>
                   {renderContent(project.content[currentContentIndex])}
                   {/* Fallback error display */}
                   <div className="w-full h-96 bg-gray-100 rounded-lg items-center justify-center hidden">
@@ -144,21 +141,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
 
                 {/* Content Indicators */}
-                {project.content.length > 1 && (
-                  <div className="flex justify-center gap-2">
-                    {project.content.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentContentIndex(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                          index === currentContentIndex
-                            ? `bg-gradient-to-r ${project.color}`
-                            : 'bg-gray-300 hover:bg-gray-400'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
               </div>
             ) : (
               <div className="text-center py-12">

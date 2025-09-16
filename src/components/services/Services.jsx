@@ -6,44 +6,65 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Brand Identity Design",
-      description: "Create compelling brand identities that resonate with your target audience and stand out in the market.",
-      image: "/assets/brand-identity.png",
+      title: "IDENTITIES VISUELLES",
+      description: "Crafting strong visual identities that reflect your brand’s personality and values, ensuring consistency across all platforms.",
+      image: "/assets/services/IDENTITES_VISUELLES.png",
       color: "from-purple-500 to-pink-500"
     },
     {
       id: 2,
-      title: "Logo Design & Branding",
-      description: "Craft memorable logos and comprehensive branding solutions that tell your unique story.",
-      image: "/assets/logo-design.png", 
+      title: "FLAYERS",
+      description: "Eye-catching flyer designs that deliver your message clearly and attract attention at first glance.",
+      image: "/assets/services/FLAYERS.png",
       color: "from-blue-500 to-cyan-500"
     },
     {
       id: 3,
-      title: "Print Design",
-      description: "Design stunning print materials including brochures, flyers, business cards, and marketing collateral.",
-      image: "/assets/print-design.png",
+      title: "CLOTHING DESIGN",
+      description: "Unique clothing designs tailored to trends and creativity, blending style with brand identity.",
+      image: "/assets/services/CLOTHING_DESIGN.png",
       color: "from-green-500 to-teal-500"
     },
     {
       id: 4,
-      title: "Digital Design",
-      description: "Create engaging digital designs for web, social media, and online marketing campaigns.",
-      image: "/assets/digital-design.png",
+      title: "LEAFLETS",
+      description: "Professional leaflet layouts designed to inform, engage, and leave a lasting impression.",
+      image: "/assets/services/LEAFLETS.png",
       color: "from-orange-500 to-red-500"
     },
     {
       id: 5,
-      title: "Packaging Design",
-      description: "Design innovative packaging solutions that protect your product and attract customers.",
-      image: "/assets/packaging-design.png",
+      title: "LOGO CREATIONS",
+      description: "Memorable and versatile logo designs that strengthen brand recognition and trust.",
+      image: "/assets/services/LOGO_CREATIONS.png",
       color: "from-indigo-500 to-purple-500"
     },
     {
       id: 6,
-      title: "Illustration & Graphics",
-      description: "Custom illustrations and graphic elements to enhance your brand's visual communication.",
-      image: "/assets/illustration.png",
+      title: "CREATION OF THE CATALOGS",
+      description: "Well-structured catalog designs that showcase products in an elegant and user-friendly way.",
+      image: "/assets/services/Creation_of_the_catalogs.png",
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      id: 7,
+      title: "MAGAZINES AND BOOKS",
+      description: "Modern magazine and book layouts that combine readability with stunning visuals.",
+      image: "/assets/services/MAGAZINES_AND_BOOKS.png",
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      id: 8,
+      title: "BILLBOARD",
+      description: "Impactful billboard designs that capture attention instantly and communicate messages effectively.",
+      image: "/assets/services/BILLBOARD.png",
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      id: 9,
+      title: "ROLL UP",
+      description: "Portable roll-up banners designed for maximum visibility in events, fairs, and promotions.",
+      image: "/assets/services/ROLL_UP.png",
       color: "from-pink-500 to-rose-500"
     }
   ]

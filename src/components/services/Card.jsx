@@ -19,7 +19,7 @@ const Card = ({ service, index }) => {
         ease: "easeOut",
         delay: index * 0.1
       }
-    }
+    } 
   }
 
   const iconVariants = {

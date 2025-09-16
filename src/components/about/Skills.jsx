@@ -230,42 +230,6 @@ const Skills = () => {
             </motion.div>
           </AnimatePresence>
         </motion.div>
-
-        {/* Additional Skills Summary */}
-        <motion.div 
-          variants={itemVariants}
-          className="mt-12 sm:mt-16 text-center"
-        >
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
-            {[
-              { value: '5+', label: 'Years Experience', gradient: 'from-purple-600 to-pink-600', delay: 0 },
-              { value: '15+', label: 'Design Tools', gradient: 'from-blue-600 to-cyan-600', delay: 0.2 },
-              { value: '200+', label: 'Projects Done', gradient: 'from-green-600 to-teal-600', delay: 0.4 },
-              { value: '50+', label: 'Happy Clients', gradient: 'from-orange-600 to-red-600', delay: 0.6 }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg"
-              >
-                <motion.div 
-                  className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-2`}
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    opacity: [0.7, 1, 0.7]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: stat.delay
-                  }}
-                >
-                  {stat.value}
-                </motion.div>
-                <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   )

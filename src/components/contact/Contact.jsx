@@ -35,7 +35,7 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject || 'Contact from Portfolio',
         message: formData.message,
-        to_email: 'laissiabdelhadi@gmail.com'
+        to_email: 'samirheroman22@gmail.com'
       }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)
@@ -54,7 +54,7 @@ const Contact = () => {
     const message = encodeURIComponent(
       `Hi! I'm ${formData.name || 'interested in your services'}. ${formData.message || 'I would like to discuss a project with you.'}`
     )
-    const whatsappLink = `https://wa.me/212766051766?text=${message}`
+    const whatsappLink = `https://wa.me/212712647586?text=${message}`
     window.open(whatsappLink, '_blank')
   }
 
@@ -211,15 +211,6 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <motion.button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send Email'}
-                    </motion.button>
                     
                     <motion.button
                       type="button"
@@ -276,7 +267,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Email</h4>
-                      <p className="text-gray-600">laissiabdelhadi@gmail.com</p>
+                      <p className="text-gray-600">samirheroman22@gmail.com</p>
                     </div>
                   </motion.div>
                   
@@ -292,7 +283,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">WhatsApp</h4>
-                      <span className="text-gray-600">+212 766 051 766</span>
+                      <span className="text-gray-600">+212 712 647 586</span>
                     </div>
                   </motion.div>
                   
@@ -317,7 +308,7 @@ const Contact = () => {
               {/* Quick Contact Cards */}
               <div className="grid grid-cols-2 gap-4">
                 <motion.a
-                  href="mailto:laissiabdelhadi@gmail.com"
+                  href="mailto:samirheroman22@gmail.com"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-2xl text-center shadow-lg"
                   whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
@@ -329,7 +320,7 @@ const Contact = () => {
                 </motion.a>
                 
                 <motion.a
-                  href="https://wa.me/213766051766"
+                  href="https://wa.me/213712647586"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white p-6 rounded-2xl text-center shadow-lg"

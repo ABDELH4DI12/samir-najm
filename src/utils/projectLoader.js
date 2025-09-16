@@ -4,17 +4,248 @@ export const loadProjectsData = () => {
     {
       id: 1,
       folderName: 'BRAND IDENTITY',
-      title: 'Brand Identity',
+      title: 'BRAND IDENTITY',
       description: 'Professional brand identity design services including logos, business cards, and complete brand guidelines.',
-      category: 'branding',
+      category: 'Print Design',
       coverImage: '/assets/BRAND%20IDENTITY/BRAND%20IDENTITY%20COVER.jpg',
       color: 'from-purple-500 to-pink-500',
       content: [
         {
-          type: 'pdf',
-          src: '/assets/BRAND%20IDENTITY/content/PFE%20NAJIM%20SAMIR.pdf',
-          name: 'Brand Identity Portfolio'
-        }
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/1.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/2.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/3.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/4.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/5.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/6.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/7.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/8.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/9.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/10.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/11.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/12.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/13.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/14.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/15.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/16.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/17.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/18.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/19.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/20.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/21.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/22.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/23.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/24.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/25.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/26.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/27.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/28.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/29.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/30.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/31.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/32.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/33.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/34.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/35.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/36.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/37.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/38.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/39.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/40.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/41.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/42.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/43.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/44.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/45.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/46.jpg',
+          name: 'IMAGE'
+        },
+        {
+          type: 'image',
+          src: '/assets/BRAND%20IDENTITY/content/47.jpg',
+          name: 'IMAGE'
+        },
+
       ]
     },
     {
@@ -22,7 +253,7 @@ export const loadProjectsData = () => {
       folderName: 'CLOTHES DESIGN',
       title: 'Clothes Design',
       description: 'Unique and stylish designs that bring fashion concepts to life with creativity and precision.',
-      category: 'fashion',
+      category: 'Print Design',
       coverImage: '/assets/CLOTHES%20DESIGN/ROLL%20UP%20COVER.jpg',
       color: 'from-blue-500 to-cyan-500',
       content: [
@@ -66,6 +297,149 @@ export const loadProjectsData = () => {
           src: '/assets/CLOTHES%20DESIGN/CONTENT/back%20v2.jpg',
           name: 'back v2'
         }
+      ]
+    },
+    {
+      id: 4,
+      folderName: 'SOCIAL MEDIA',
+      title: 'Social Media',
+      description: 'Creative social media designs and campaigns that engage audiences and build brand presence across platforms.',
+      category: 'Social Media',
+      coverImage: '/assets/SOCIAL%20MEDIA/SOCIAL%20MEDIA%20COVER.jpg',
+      color: 'from-pink-500 to-rose-500',
+      content: [
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/CH4-sport%20poster.jpg',
+          name: 'Sport Poster Design'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/Ecac%20poster.jpg',
+          name: 'ECAC Poster'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/Green-march-2.jpg',
+          name: 'Green March Design'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/Kaidi-facebook-cover.jpg',
+          name: 'Facebook Cover Design'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/P3.jpg',
+          name: 'Social Post 3'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/P5.jpg',
+          name: 'Social Post 5'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/PIZZA.jpg',
+          name: 'Pizza Promotion'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/PMP%203.jpg',
+          name: 'PMP Design 3'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/PMP%204.jpg',
+          name: 'PMP Design 4'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/PMP%205.jpg',
+          name: 'PMP Design 5'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/POST-4.jpg',
+          name: 'Social Post 4'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/PRO%201.jpg',
+          name: 'Professional Post 1'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/post%201.jpg',
+          name: 'Social Post 1'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/post%202.jpg',
+          name: 'Social Post 2'
+        },
+        {
+          type: 'image',
+          src: '/assets/SOCIAL%20MEDIA/CONTENT/pulpy%20.jpg',
+          name: 'Pulpy Campaign'
+        }
+      ]
+    },
+    {
+      id: 4,
+      folderName: 'FLAYERS',
+      title: 'FLAYERS',
+      description: 'Engaging flyer designs that spread your message clearly and attract attention.',
+      category: 'Print Design',
+      coverImage: '/assets/FLAYERS/FAYERSLCOVER.jpg',
+      color: 'from-pink-500 to-rose-500',
+      content: [
+        {
+          type: 'image',
+          src: '/assets/FLAYERS/CONTENT/affiche-1.jpg',
+          name: ''
+        },
+        {
+          type: 'image',
+          src: '/assets/FLAYERS/CONTENT/IMG_20250910_185424.jpg',
+          name: ''
+        },
+        {
+          type: 'pdf',
+          src: '/assets/FLAYERS/CONTENT/32_compressed.pdf',
+          name: ''
+        },
+        {
+          type: 'pdf',
+          src: '/assets/FLAYERS/CONTENT/33.pdf',
+          name: ''
+        },
+        {
+          type: 'pdf',
+          src: '/assets/FLAYERS/CONTENT/34.pdf',
+          name: ''
+        },
+        {
+          type: 'pdf',
+          src: '/assets/FLAYERS/CONTENT/PMP-1.pdf',
+          name: ''
+        },
+      ]
+    },
+    {
+      id: 5,
+      folderName: 'ROLL UPS',
+      title: 'ROLL UPS',
+      description: 'Creative and impactful roll up designs that capture attention and highlight your brand.',
+      category: 'Print Design',
+      coverImage: '/assets/ROLLUP/ROLL-UP-COVER.jpg',
+      color: 'from-pink-500 to-rose-500',
+      content: [
+        {
+          type: 'pdf',
+          src: '/assets/ROLLUP/CONTENT/ROLL_UPS _compressed.pdf',
+          name: ''
+        },
       ]
     },
     {
@@ -174,92 +548,6 @@ export const loadProjectsData = () => {
         }
       ]
     },
-    {
-      id: 4,
-      folderName: 'SOCIAL MEDIA',
-      title: 'Social Media',
-      description: 'Creative social media designs and campaigns that engage audiences and build brand presence across platforms.',
-      category: 'digital',
-      coverImage: '/assets/SOCIAL%20MEDIA/SOCIAL%20MEDIA%20COVER.jpg',
-      color: 'from-pink-500 to-rose-500',
-      content: [
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/CH4-sport%20poster.jpg',
-          name: 'Sport Poster Design'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/Ecac%20poster.jpg',
-          name: 'ECAC Poster'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/Green-march-2.jpg',
-          name: 'Green March Design'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/Kaidi-facebook-cover.jpg',
-          name: 'Facebook Cover Design'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/P3.jpg',
-          name: 'Social Post 3'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/P5.jpg',
-          name: 'Social Post 5'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/PIZZA.jpg',
-          name: 'Pizza Promotion'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/PMP%203.jpg',
-          name: 'PMP Design 3'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/PMP%204.jpg',
-          name: 'PMP Design 4'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/PMP%205.jpg',
-          name: 'PMP Design 5'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/POST-4.jpg',
-          name: 'Social Post 4'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/PRO%201.jpg',
-          name: 'Professional Post 1'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/post%201.jpg',
-          name: 'Social Post 1'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/post%202.jpg',
-          name: 'Social Post 2'
-        },
-        {
-          type: 'image',
-          src: '/assets/SOCIAL%20MEDIA/CONTENT/pulpy%20.jpg',
-          name: 'Pulpy Campaign'
-        }
-      ]
-    }
   ];
 
   return projects;
