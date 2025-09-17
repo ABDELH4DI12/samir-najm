@@ -99,7 +99,7 @@ const Contact = () => {
         />
         <motion.div
           animate={{
-            rotate: [360, 0],
+            rotate: [360, 0],f21
             scale: [1, 1.2, 1]
           }}
           transition={{
@@ -320,7 +320,7 @@ const Contact = () => {
                 </motion.a>
                 
                 <motion.a
-                  href="https://wa.me/213712647586"
+                  href="https://wa.me/212712647586"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 text-white p-6 rounded-2xl text-center shadow-lg"
