@@ -99,7 +99,7 @@ const Contact = () => {
         />
         <motion.div
           animate={{
-            rotate: [360, 0],f21
+            rotate: [360, 0],
             scale: [1, 1.2, 1]
           }}
           transition={{
